@@ -1,3 +1,3 @@
 ## Open Hotel Booking
 
-Open source hotel booking system built with Laravel.
+Open source online hotel booking system built with Laravel
