@@ -14,4 +14,10 @@ class AdminLoginController extends Controller {
 
 		return View::make('admin/login');
 	}
+
+	public function logout()
+	{
+		Session::flush();
+		return Redirect::to('admin/login');
+	}
 }

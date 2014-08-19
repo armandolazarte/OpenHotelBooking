@@ -95,3 +95,10 @@ Route::filter('admin_login', function()
 		return Redirect::to('admin');
 	}
 });
+
+Route::filter('admin', function()
+{
+	if (!Auth::check()) {
+		return Redirect::to('admin/login');
+	}
+});
