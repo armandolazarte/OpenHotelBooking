@@ -1,8 +1,7 @@
 {
-	"name": "laravel/laravel",
-	"description": "The Laravel Framework.",
-	"keywords": ["framework", "laravel"],
-	"license": "MIT",
+	"name": "uyguncyp/OpenHotelBooking",
+	"description": "Open source online hotel booking system built with Laravel",
+	"keywords": ["hotel", "booking"],
 	"require": {
 		"laravel/framework": "4.2.*"
 	},
@@ -16,6 +15,18 @@
 			"app/tests/TestCase.php"
 		]
 	},
+	"authors": [
+		{
+			"name": "Mehmet Uygun",
+			"role": "Developer"
+		},
+		{
+			"name": "Omer Karadagli",
+			"email": "ufo_karadagli@hotmail.com",
+			"homepage": "http://www.ockwebs.com",
+			"role": "Developer"
+		}
+	],
 	"scripts": {
 		"post-install-cmd": [
 			"php artisan clear-compiled",
