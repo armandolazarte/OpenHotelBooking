@@ -16,6 +16,14 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::any('/admin/login', array('before' => 'admin_login', 'uses' => 'AdminLoginController@login'));
+Route::any('/admin/login', array(
+    'before' => 'admin_login',
+    'uses' => 'AdminLoginController@login'
+));
+
 Route::any('/admin/logout', 'AdminLoginController@logout');
-Route::any('/admin', array('before' => 'admin', 'uses' => 'AdminController@dashboard'));
+
+Route::any('/admin', array(
+    'before' => 'admin',
+    'uses' => 'AdminController@dashboard'
+));
