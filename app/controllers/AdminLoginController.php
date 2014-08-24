@@ -4,10 +4,11 @@ class AdminLoginController extends Controller {
 
 	public function login()
 	{
-		if (!Request::isMethod('post')) {
-			return View::make('admin/login');
-		}
+		return View::make('admin/login');
+	}
 
+	public function loginAction()
+	{
 		$loginParams = array(
 			'email' => Input::get('email'),
 			'password' => Input::get('password'),
@@ -22,7 +23,7 @@ class AdminLoginController extends Controller {
 			->with('error_message', Lang::get('form.invalid_login'));
 	}
 
-	public function logout()
+	public function logoutAction()
 	{
 		Session::flush();
 		return Redirect::to('admin/login');
