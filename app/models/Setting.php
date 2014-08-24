@@ -9,6 +9,11 @@ class Setting extends Eloquent {
 	 */
 	protected $table = 'setting';
 
+	/**
+	 * The primary key for the model.
+	 *
+	 * @var string
+	 */
 	protected $primaryKey = 'name';
 
 	/**

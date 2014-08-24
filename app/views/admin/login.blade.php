@@ -50,8 +50,8 @@
 					{{ trans('form.remember_me') }}
 				</label>
 			</div>
-			{{ Form::submit(trans('general.login'), array('class' => 'btn btn-success btn-block')) }}
-			{{link_to('forgotten_password', trans('form.forget_password'))}}
+			{{ Form::submit(trans('form.login'), array('class' => 'btn btn-success btn-block')) }}
+			{{link_to('forgotten_password', trans('form.forgotten_password'))}}
 			{{ Form::close() }}
 		</div>
 	</div>
