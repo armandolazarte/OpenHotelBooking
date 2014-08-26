@@ -17,6 +17,23 @@ class Setting extends Eloquent {
 	protected $primaryKey = 'name';
 
 	/**
+	 * Gets value of a setting
+	 *
+	 * @param  string $name Name of the setting
+	 *
+	 * @return string       Value of the setting
+	 */
+	public static function get($name)
+	{
+		$setting = Setting::find($name);
+		if (!$setting) {
+			return null;
+		}
+
+		return $setting->value;
+	}
+
+	/**
 	 * Update the settings in mass
 	 *
 	 * @param  array   $settingsToUpdate Setting name => value array

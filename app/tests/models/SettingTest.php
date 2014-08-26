@@ -17,4 +17,12 @@ class SettingTest extends TestCase {
 		$this->assertEquals(1, $affected);
 	}
 
+	/**
+	 * Test if can get setting value
+	 */
+	public function testGetsSettingValue()
+	{
+		$this->assertEquals('test_value', Setting::get('test_setting'));
+	}
+
 }
