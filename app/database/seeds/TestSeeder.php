@@ -17,7 +17,7 @@ class TestSeeder extends Seeder {
 
 }
 
-class UserTableSeeder extends Seeder {
+class TestUserTableSeeder extends Seeder {
 
 	public function run()
 	{
@@ -35,7 +35,7 @@ class UserTableSeeder extends Seeder {
 
 }
 
-class SettingTableSeeder extends Seeder {
+class TestSettingTableSeeder extends Seeder {
 
 	public function run()
 	{
