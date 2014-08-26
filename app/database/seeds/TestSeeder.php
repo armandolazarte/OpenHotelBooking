@@ -1,6 +1,6 @@
 <?php
 
-class DatabaseSeeder extends Seeder {
+class TestSeeder extends Seeder {
 
 	/**
 	 * Run the database seeds.
@@ -41,8 +41,8 @@ class SettingTableSeeder extends Seeder {
 	{
 		Setting::create(
 			array(
-				'name' => 'hotel_name',
-				'value' => 'Open Hotel Booking',
+				'name' => 'ali',
+				'value' => 'asfafsafas',
 			)
 		);
 
