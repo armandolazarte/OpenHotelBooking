@@ -12,7 +12,7 @@ class CreateRoomTypeTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('roomtype', function($table)
+		Schema::create('room_type', function($table)
 		{
 			$table->increments('id');
 			$table->string('name', 64);
@@ -27,7 +27,7 @@ class CreateRoomTypeTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('roomtype');
+		Schema::drop('room_type');
 	}
 
 }
