@@ -18,8 +18,14 @@ Route::get('/', function()
 
 Route::group(array('prefix' => 'admin'), function()
 {
-	Route::get('login', 'AdminLoginController@login');
-	Route::post('login', 'AdminLoginController@loginAction');
-	Route::get('logout', 'AdminLoginController@logoutAction');
-	Route::get('/', 'AdminController@dashboard');
+	Route::group(array('before' => 'admin'), function()
+	{
+		Route::get('/', 'AdminController@dashboard');
+		Route::get('logout', 'AdminLoginController@logoutAction');
+	});
+	Route::group(array('before' => 'admin_login'), function()
+	{
+		Route::get('login', 'AdminLoginController@login');
+		Route::post('login', 'AdminLoginController@loginAction');
+	});
 });
