@@ -19,12 +19,11 @@ class AdminSystemController extends Controller {
 
 		if ($validator->fails()) {
 			$data['messages'] = $validator->messages();
-			return View::make('admin/setting')->with($data);
 		} else {
 			$data['alert'] = 'Success';
 			$data['alert_type'] = 'alert-success';
-			return View::make('admin/setting')->with($data);
 		}
-		return View::make('admin/setting');
+
+		return View::make('admin/setting')->with($data);
 	}
 }
