@@ -14,10 +14,6 @@ class AdminSystemController extends Controller {
 			Input::all(), 
 			array(
 				'hotel_name' => 'required|max:128',
-			), 
-			array(), 
-			array(
-				'hotel_name' => Lang::get('admin.hotel_name'),
 			)
 		);
 

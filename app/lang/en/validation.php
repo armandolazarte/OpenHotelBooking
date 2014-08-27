@@ -99,6 +99,8 @@ return array(
 	|
 	*/
 
-	'attributes' => array(),
+	'attributes' => array(
+		'hotel_name' => 'hotel name',
+	),
 
 );
