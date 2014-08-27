@@ -21,6 +21,8 @@ Route::group(array('prefix' => 'admin'), function()
 	Route::group(array('before' => 'admin'), function()
 	{
 		Route::get('/', 'AdminController@dashboard');
+		Route::get('system/setting', 'AdminSystemController@setting');
+		Route::post('system/setting', 'AdminSystemController@settingAction');
 		Route::get('logout', 'AdminLoginController@logoutAction');
 	});
 	Route::group(array('before' => 'admin_login'), function()
