@@ -27,9 +27,14 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="{{url('/admin')}}"><i class="glyphicon glyphicon-home"></i> {{ trans('admin.home') }}</a></li>                       
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-wrench"></i> {{ trans('admin.system') }}</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{url('admin/system/setting')}}">{{ trans('admin.setting') }}</a></li>
+                            </ul>
+                        </li>                           
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
